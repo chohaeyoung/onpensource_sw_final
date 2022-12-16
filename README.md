@@ -21,8 +21,8 @@ I classified brain tumor by *scikit-learn*
 ## How Do I Classify the Datas?
 * algorithm
 
-I choose **random forest**
-Random forest method composes a subset from train data and makes a decision tree through *Bagging*
+I choose **random forest**.
+Random forest method composes a subset from train data and makes a decision tree through *Bagging*.
 It makes some decision trees.
 And it makes some decision trees and vote the result.
 
@@ -37,7 +37,7 @@ This is why I choose random forest.
 
 *max_samples* : If bootstrap is True, the number of samples to draw from X to train each base estimator.
 
-*max_features* : The number of features to consider when looking for the best split
+*max_features* : The number of features to consider when looking for the best split.
 
 *max_depth* : The maximum depth of the tree. The deeper the tree, the more splits it has and it captures more information about the data.
 
