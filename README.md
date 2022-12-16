@@ -9,7 +9,9 @@ I classified brain tumor by *scikit-learn*
 ## What Is the Train set?
 * Brain tumor
  
- There are MRI datas about brain tumor 
+ There are MRI datas about brain tumor.
+ 
+ Type of datas : glioma_tumor, meningioma_tumor, no_tumor, pituitary_tumor
  
 ![image](https://user-images.githubusercontent.com/115198496/207895287-669d3924-6515-4132-abb8-27756b59e621.png)
 ![image](https://user-images.githubusercontent.com/115198496/207895315-fba2869c-be38-4687-baec-68d2b70709df.png)
@@ -31,30 +33,13 @@ This is why I choose random forest.
 
 * hyperparameter tuning 
 
-*n_estimators* : The number of trees in the forest. The higher n_estimators, the higher accuracy, but n_estimators is too high, then the effiency decreases.
+*n_estimators* : The number of trees in the forest. The higher n_estimators is, the higher accuracy. But n_estimators is too high, then the effiency decreases.
 
 *max_samples* : If bootstrap is True, the number of samples to draw from X to train each base estimator.
 
 *max_features* : The number of features to consider when looking for the best split
 
-*max_depth* : The maximum depth of the tree. 
+*max_depth* : The maximum depth of the tree. The deeper the tree, the more splits it has and it captures more information about the data.
 
 *max_leaf_node* : Grow trees with max_leaf_nodes in best-first fashion.
-
-## My code
-```
-rbf = sklearn.ensemble.RandomForestClassifier(random_state = 100, 
-                                              max_samples = 0.7,
-                                              n_estimators = 400,
-                                              max_features = 5,
-                                              max_depth = 50
-                                              
-                                              )
-rbf.fit(X_train, y_train)
-
-y_pred = rbf.predict(X_test)
-
-print('Accuracy: %.5f' % sklearn.metrics.accuracy_score(y_test, y_pred))
     
-
-
